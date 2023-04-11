@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Venta de Mates</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Venta de Mates</h1>  
+    </header>       
+    <div class="contenedor">
+        <h2 class="subtitulo">Para ver los mates disponibles haga click en el siguiente boton</h2>
+        <button onclick="verMates()" class="btn-mates">Ver Mates a disponibles</button> 
+    </div>
+    <div class="mates" id="mateUno" style="display: none;">
+        <div class="mate">
+            <h3>Mate Imperial Negro</h3> 
+            <img src="descarga.jpg" alt=""><br/>  
+            <button class='btn-comprar'onclick="comprar()">Comprar</button>
+        </div>
+    </div> 
+    <div class="mates" id="mateDos" style="display: none;">
+        <div class="mate">
+            <h3>Mate Camionero</h3> 
+            <img src="mateCamionero.jpg" alt=""><br/> 
+            <button class='btn-comprar'onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+    <div class="mates" id="mateTres"  style="display: none;">
+        <div class="mate">
+            <h3>Mate Torpedo</h3> 
+            <img src="mateTorpedo.jpg" alt=""><br/>
+            <button class='btn-comprar'onclick="comprar()">Comprar</button>
+        </div>
+    </div>
+    <script src="scrpit.js"></script>
+</body>
+</html>
