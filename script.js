@@ -4,7 +4,7 @@ let mateTres = 'Mate Torpedo';
 let mateActivo=true;
 
 
-function verMates () {
+function verMate () {
     let mate=prompt(`Ingrese el numero del mate que desea ver \n 1.${mateUno}\n2.${mateDos}\n3.${mateTres}`); 
     while (mate !='1' && mate!='2' && mate!='3') {
         mate = prompt(`Error ingrese un numero de mate valido \n 1.${mateUno}\n2.${mateDos}\n3.${mateTres}`);
