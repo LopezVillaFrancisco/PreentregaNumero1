@@ -13,29 +13,16 @@
     </header>       
     <div class="contenedor">
         <h2 class="subtitulo">Para ver los mates disponibles haga click en el siguiente boton</h2>
-        <button onclick="verMate()" class="btn-mates">Ver Mates a disponibles</button> 
-    </div>
-    <div class="mates" id="mateUno" style="display: none;">
-        <div class="mate">
-            <h3>Mate Imperial Negro</h3> 
-            <img src="descarga.jpg" alt=""><br/>  
-            <button class='btn-comprar'onclick="comprar()">Comprar</button>
-        </div>
+        <button onclick="elegirMate()" class="btn-mates">Ver Mates a disponibles</button> 
     </div> 
-    <div class="mates" id="mateDos" style="display: none;">
+    <div class="mates" id="mates" style="display: none;">
         <div class="mate">
-            <h3>Mate Camionero</h3> 
-            <img src="mateCamionero.jpg" alt=""><br/> 
-            <button class='btn-comprar'onclick="comprar()">Comprar</button>
+            <h3 id="nombre"></h3> 
+            <img src="" id="fotoMate" alt=""><br/>   
+            <h4 id="precio"></h4>
+            <p id="descripcion"></p>
+            <button class='btn-comprar' id="comprar" onclick="comprar()">Comprar</button>
         </div>
-    </div>
-    <div class="mates" id="mateTres"  style="display: none;">
-        <div class="mate">
-            <h3>Mate Torpedo</h3> 
-            <img src="mateTorpedo.jpg" alt=""><br/>
-            <button class='btn-comprar'onclick="comprar()">Comprar</button>
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
