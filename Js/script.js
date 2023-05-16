@@ -4,7 +4,7 @@ const productosArray = [
         tipo : "Mate",
         nombre : "mateImperial", 
         precio : 5000, 
-        imagen : "/Preentrega/Imagenes/Mates/mateImperial.jpg", 
+        imagen : "../Imagenes/Mates/mateImperial.jpg", 
         descripcion : "Mate moderno de color negro ideal para usar en el dia a dia",
         id : 01
     },     
@@ -12,7 +12,7 @@ const productosArray = [
         tipo : "Mate",
         nombre : "Mate Torpedo", 
         precio : 5000, 
-        imagen : "/Preentrega/Imagenes/Mates/MateTorpedo.jpg", 
+        imagen : "../Imagenes/Mates/MateTorpedo.jpg", 
         descripcion : "Hermoso mate color madera", 
         id : 02
     }, 
@@ -20,14 +20,14 @@ const productosArray = [
         tipo : "Mate",
         nombre : "Mate Camionero", 
         precio : 5000, 
-        imagen : "/Preentrega/Imagenes/Mates/MateCamionero.jpg",
+        imagen : "../Imagenes/Mates/MateCamionero.jpg",
         descripcion : "Mate moderno de color madera ideal para usar en el dia a dia", 
         id :  03    
     }, 
     {
         tipo : "Termo", 
         nombre : "Termo Stanley",  
-        imagen : "/Preentrega/Imagenes/Termos/termoStanley.jpg",
+        imagen : "../Imagenes/Termos/termoStanley.jpg",
         precio : 18000, 
         descripcion : "Termo importado desde Estados Unidos de  1.4 LTS con gran rendimiento termico", 
         id : 04
@@ -35,7 +35,7 @@ const productosArray = [
     {
         tipo : "Termo", 
         nombre : "Termo Luminagro", 
-        imagen : "/Preentrega/Imagenes/Termos/termoLuminagro.jpg",
+        imagen : "../Imagenes/Termos/termoLuminagro.jpg",
         precio : 14000, 
         descripcion : "Termo Luminagro con capacidad de un litro su sistema de vacío interno permite la conservación de la temperatura de tu bebida",  
         id : 05
@@ -43,7 +43,7 @@ const productosArray = [
     {
         tipo : "Termo", 
         nombre : "Termo Media Manija", 
-        imagen : "/Preentrega/Imagenes/Termos/termoMediaManija.jpg",
+        imagen : "../Imagenes/Termos/termoMediaManija.jpg",
         precio : 11000, 
         descripcion : "Mate de media manija con capacidad de 1 LT", 
         id : 06
@@ -51,7 +51,7 @@ const productosArray = [
     {
         tipo : "Bombilla", 
         nombre : "Bombilla Mate Chata Acero Inoxidable", 
-        imagen : "/Preentrega/Imagenes/Bombillas/bombillaChata.jpg", 
+        imagen : "../Imagenes/Bombillas/bombillaChata.jpg", 
         precio : 3000,
         descripcion : "Bombilla de acero inoxidable chata.",     
         id : 07
@@ -125,7 +125,7 @@ if(CarritoDb){
         icon: "success",
         button: "Ok!",
       });
-      
+
     const id=e.currentTarget.id; 
     //busco el id a agregar
     const productoAgregar = productosArray.find(producto => producto.id == id); 
