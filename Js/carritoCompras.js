@@ -10,7 +10,6 @@ const precioTotal = document.getElementById('precio-total');
 let eliminarBtn;
 
 // console.log(contenedorTextoVacio); 
-// console.log(carrito)
 function cargarCarrito(){
 if(carrito && carrito.length >= 0){ 
     // console.log(carrito);
