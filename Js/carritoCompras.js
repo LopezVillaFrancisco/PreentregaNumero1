@@ -12,7 +12,7 @@ let eliminarBtn;
 // console.log(contenedorTextoVacio); 
 // console.log(carrito)
 function cargarCarrito(){
-if(carrito && carrito.length > 0){ 
+if(carrito && carrito.length >= 0){ 
     // console.log(carrito);
     contenedorTextoVacio.classList.add('esconder');
     
@@ -67,9 +67,9 @@ function elimnarProductoCarrito(e){
     //  console.log(index); 
     // console.log(carrito)
     carrito.splice(index, 1); 
-    //  console.log(carrito) 
+    console.log(carrito)     
+    localStorage.setItem('productos-carrito',JSON.stringify(carrito));
     cargarCarrito(); 
-    localStorage.setItem('productos-carrito',JSON.stringify(carrito))
   }
   function calcularTotal(){ 
     const precioFinal=carrito.reduce((total,producto)=> total +(producto.precio*producto.contador),0);
