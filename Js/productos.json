@@ -11,7 +11,7 @@
         "tipo" : "Mate",
         "nombre" : "Mate Torpedo", 
         "precio" : 5000, 
-        "imagen" : "../Imagenes/Mates/MateTorpedo.jpg", 
+        "imagen" : "../Imagenes/Mates/mateTorpedo.jpg", 
         "descripcion" : "Hermoso mate color madera", 
         "id" : "02"
     }, 
@@ -19,7 +19,7 @@
         "tipo" : "Mate",
         "nombre" : "Mate Camionero", 
         "precio" : 5000, 
-        "imagen" : "../Imagenes/Mates/MateCamionero.jpg",
+        "imagen" : "../Imagenes/Mates/mateCamionero.jpg",
         "descripcion" : "Mate moderno de color madera ideal para usar en el dia a dia", 
         "id" :  "03"    
     }, 
