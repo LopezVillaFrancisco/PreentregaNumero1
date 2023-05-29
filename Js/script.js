@@ -28,7 +28,7 @@ function cargarProductos(tipoProducto) {
              <img src="${producto.imagen}" id="fotoProducto" alt="${producto.nombre}"><br/>
            <button class='btn-agregar-carrito'id='${producto.id}'>Agregar al carrito</button>` 
            contenedorProductos.append(productoDiv);  
-           //Se agregan los botones al html y los actualizo para agregarlos a la variable
+           
            actualizarBoton(); 
             
             }
@@ -49,8 +49,7 @@ function cargarProductos(tipoProducto) {
         })
     })
  
-function actualizarBoton(){ 
-    //Cuando se agrega un boton al html se agrega a la variable agregarCarritoBtn
+function actualizarBoton(){
     agregarCarritoBtn = document.querySelectorAll('.btn-agregar-carrito'); 
     agregarCarritoBtn.forEach(boton =>{
         boton.addEventListener('click', agregarAlCarrito)
@@ -59,14 +58,12 @@ function actualizarBoton(){
 
 
 let productosCarrito;
-//Traigo informacion del local
 let CarritoDb = localStorage.getItem('productos-carrito');
 
 if(CarritoDb){ 
-    // Si hay informacion en el local la parseo para seguir usandola 
+     
     productosCarrito = JSON.parse(CarritoDb);
-}else{
-    // Si no hay informacion uso el array de productos carrito vacio    
+}else{    
     productosCarrito=[];
 }
   function agregarAlCarrito(e){ 
@@ -78,21 +75,15 @@ if(CarritoDb){
       });
 
     const id=e.currentTarget.id; 
-    //busco el id a agregar
     const productoAgregar = productosArray.find(producto => producto.id == id); 
-    // reviso que el producto a agregar no exista ya en el array de productosCarrito   
     if(productosCarrito.some(producto => producto.id == id)){
         const index = productosCarrito.findIndex(producto=>producto.id==id)
-        // cada vez que se agrega un producto repetido incremento el contador 
         productosCarrito[index].contador++; 
     }else{ 
-        // para evitar repetir agrego un contador a cada producto agregado
         productoAgregar.contador=1;
         productosCarrito.push(productoAgregar); 
-    // console.log(productosCarrito)
     console.log(productoAgregar.contador)
     }
     console.log(productosCarrito) 
     localStorage.setItem('productos-carrito',JSON.stringify(productosCarrito))
   } 
-//   console.log(productosCarrito)

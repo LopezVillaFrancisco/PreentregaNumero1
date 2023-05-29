@@ -1,6 +1,5 @@
-//recibo los elementos guardados en el localStorage
+
 let carrito=localStorage.getItem('productos-carrito'); 
-// console.log(carrito) 
 carrito=JSON.parse(carrito);
 const contenedorCarrito = document.getElementById('contenedor-carrito');
 const contenedorProductosCarrito = document.getElementById('contenedor-productos-carrito');
@@ -9,10 +8,8 @@ const accionesBtn = document.getElementById('carrito-botones');
 const precioTotal = document.getElementById('precio-total');
 let eliminarBtn;
 
-// console.log(contenedorTextoVacio); 
 function cargarCarrito(){
 if(carrito && carrito.length >= 0){ 
-    // console.log(carrito);    
     contenedorProductosCarrito.innerHTML = "";
     carrito.forEach(producto => {
         const div = document.createElement('div'); 
@@ -53,7 +50,6 @@ if(carrito && carrito.length >= 0){
 cargarCarrito();
 
 function actualizarBoton(){ 
-    //Cuando se agrega un boton al html se agrega a la variable eliminarBtn
     eliminarBtn = document.querySelectorAll('.btn-eliminar'); 
     eliminarBtn.forEach(boton =>{
         boton.addEventListener('click',elimnarProductoCarrito);
@@ -61,10 +57,7 @@ function actualizarBoton(){
 }
 function elimnarProductoCarrito(e){
     const id=e.currentTarget.id;
-    // console.log(id)
      const index = carrito.findIndex(producto=>producto.id == id); 
-    //  console.log(index); 
-    // console.log(carrito)
     carrito.splice(index, 1); 
     console.log(carrito)     
     actualizarLocalStorage();
@@ -98,8 +91,7 @@ function elimnarProductoCarrito(e){
 
   const btnSumar = document.querySelectorAll('.boton-contador-sumar');
   const btnRestar = document.querySelectorAll('.boton-contador-restar');
-//   console.log(btnSumar); 
-//   console.log(btnSumar[0].id)  
+    
   function sumarContador(id){
     for (let i = 0; i < carrito.length; i++){
         if(id == carrito[i].id){
