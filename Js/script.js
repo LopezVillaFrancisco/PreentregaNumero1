@@ -1,62 +1,13 @@
 
-const productosArray = [
-    { 
-        tipo : "Mate",
-        nombre : "mateImperial", 
-        precio : 5000, 
-        imagen : "../Imagenes/Mates/mateImperial.jpg", 
-        descripcion : "Mate moderno de color negro ideal para usar en el dia a dia",
-        id : 01
-    },     
-    {
-        tipo : "Mate",
-        nombre : "Mate Torpedo", 
-        precio : 5000, 
-        imagen : "../Imagenes/Mates/MateTorpedo.jpg", 
-        descripcion : "Hermoso mate color madera", 
-        id : 02
-    }, 
-    {   
-        tipo : "Mate",
-        nombre : "Mate Camionero", 
-        precio : 5000, 
-        imagen : "../Imagenes/Mates/MateCamionero.jpg",
-        descripcion : "Mate moderno de color madera ideal para usar en el dia a dia", 
-        id :  03    
-    }, 
-    {
-        tipo : "Termo", 
-        nombre : "Termo Stanley",  
-        imagen : "../Imagenes/Termos/termoStanley.jpg",
-        precio : 18000, 
-        descripcion : "Termo importado desde Estados Unidos de  1.4 LTS con gran rendimiento termico", 
-        id : 04
-    }, 
-    {
-        tipo : "Termo", 
-        nombre : "Termo Luminagro", 
-        imagen : "../Imagenes/Termos/termoLuminagro.jpg",
-        precio : 14000, 
-        descripcion : "Termo Luminagro con capacidad de un litro su sistema de vacío interno permite la conservación de la temperatura de tu bebida",  
-        id : 05
-    },
-    {
-        tipo : "Termo", 
-        nombre : "Termo Media Manija", 
-        imagen : "../Imagenes/Termos/termoMediaManija.jpg",
-        precio : 11000, 
-        descripcion : "Mate de media manija con capacidad de 1 LT", 
-        id : 06
-    }, 
-    {
-        tipo : "Bombilla", 
-        nombre : "Bombilla Mate Chata Acero Inoxidable", 
-        imagen : "../Imagenes/Bombillas/bombillaChata.jpg", 
-        precio : 3000,
-        descripcion : "Bombilla de acero inoxidable chata.",     
-        id : 07
-    }    
-]
+let productosArray = [];
+
+fetch("../Js/productos.json")
+    .then( (res) => res.json())
+    .then( (data) => {
+        productosArray = data; 
+        cargarProductos(productosArray)
+    })
+
 
 const contenedorProductos = document.getElementById('contenedor-productos');  
 const botonesNav=document.querySelectorAll('.btn-nav');
@@ -83,7 +34,7 @@ function cargarProductos(tipoProducto) {
             }
         );
     }  
-    cargarProductos(productosArray);
+    
 
     botonesNav.forEach(boton =>{ 
         boton.addEventListener('click',(e) =>{ 

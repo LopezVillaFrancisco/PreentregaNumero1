@@ -12,10 +12,8 @@ let eliminarBtn;
 // console.log(contenedorTextoVacio); 
 function cargarCarrito(){
 if(carrito && carrito.length >= 0){ 
-    // console.log(carrito);
-    contenedorTextoVacio.classList.add('esconder');
-    
-    contenedorProductosCarrito.innerHTML = " ";
+    // console.log(carrito);    
+    contenedorProductosCarrito.innerHTML = "";
     carrito.forEach(producto => {
         const div = document.createElement('div'); 
         div.classList.add('producto'); 
@@ -27,7 +25,9 @@ if(carrito && carrito.length >= 0){
         </div> 
         <div class="cantidad">
             <h5>Cantidad</h5>
+            <button class='boton-contador boton-contador-sumar' onclick='sumarContador(${producto.id})' id="${producto.id}" >+</button>
             <p>${producto.contador}</p>
+            <button class='boton-contador boton-contador-restar' onclick='restarContador(${producto.id})'id="${producto.contador}" >-</button>
         </div>
         <div class="producto-precio">
             <h5>Precio</h5>
@@ -67,7 +67,7 @@ function elimnarProductoCarrito(e){
     // console.log(carrito)
     carrito.splice(index, 1); 
     console.log(carrito)     
-    localStorage.setItem('productos-carrito',JSON.stringify(carrito));
+    actualizarLocalStorage();
     cargarCarrito(); 
   }
   function calcularTotal(){ 
@@ -75,10 +75,57 @@ function elimnarProductoCarrito(e){
     precioTotal.innerText =`$${precioFinal}`;  
   } 
   function finalizarCompra(){
-    swal({
-        title: "Felicidades !",
-        text: "Usted finalizo su compra!",
-        icon: "success",
-        button: "Ok!",
-      });
-  }
+    swal.fire({
+        title: '¿Desea finalizar su compra?',
+        text: "Si confirma se compraran los productos que tenga en el carrito.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: 'rgb(2, 90, 2)',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Confirmar',
+        cancelButtonText:'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            '¡Genial!',
+            'Usted finalizo su compra.',
+            'success'
+          )
+        }
+      })
+
+  } 
+
+  const btnSumar = document.querySelectorAll('.boton-contador-sumar');
+  const btnRestar = document.querySelectorAll('.boton-contador-restar');
+//   console.log(btnSumar); 
+//   console.log(btnSumar[0].id)  
+  function sumarContador(id){
+    for (let i = 0; i < carrito.length; i++){
+        if(id == carrito[i].id){
+            carrito[i].contador = carrito[i].contador+1; 
+            cargarCarrito();
+            actualizarLocalStorage(); 
+        }    
+    }
+}
+function restarContador(id){
+    for (let i = 0; i < carrito.length; i++){
+        if(id == carrito[i].id){
+            carrito[i].contador = carrito[i].contador-1; 
+            if(carrito[i].contador==0){
+                Swal.fire({
+                    icon: 'error',
+                    title: '¿Quieres eliminar este producto?',
+                    text: 'Si eso quieres, haz click en el boton eliminar',
+                  })
+            carrito[i].contador=carrito[i].contador+1;
+            }
+            actualizarLocalStorage();
+            cargarCarrito(); 
+        }    
+    }
+}  
+function actualizarLocalStorage(){
+    localStorage.setItem('productos-carrito',JSON.stringify(carrito));
+}
