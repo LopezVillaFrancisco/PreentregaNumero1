@@ -3,7 +3,7 @@
         "tipo" : "Mate",
         "nombre" : "mateImperial", 
         "precio" : 5000, 
-        "imagen" : "../Imagenes/Mates/mateImperial.jpg", 
+        "imagen" : "https://d22fxaf9t8d39k.cloudfront.net/a26db402338b97790c3e1905747ca941316aa456595918b81509b936e0dc239d109209.png", 
         "descripcion" : "Mate moderno de color negro ideal para usar en el dia a dia",
         "id" : "01"
     },     
@@ -11,7 +11,7 @@
         "tipo" : "Mate",
         "nombre" : "Mate Torpedo", 
         "precio" : 5000, 
-        "imagen" : "../Imagenes/Mates/mateTorpedo.jpg", 
+        "imagen" : "https://apolomates.com.ar/wp-content/uploads/2021/11/Torpedo-uruguayo-liso.jpg", 
         "descripcion" : "Hermoso mate color madera", 
         "id" : "02"
     }, 
@@ -19,22 +19,22 @@
         "tipo" : "Mate",
         "nombre" : "Mate Camionero", 
         "precio" : 5000, 
-        "imagen" : "../Imagenes/Mates/mateCamionero.jpg",
+        "imagen" : "https://apolomates.com.ar/wp-content/uploads/2021/11/Camionero-uruguayo.jpg",
         "descripcion" : "Mate moderno de color madera ideal para usar en el dia a dia", 
         "id" :  "03"    
     }, 
     {
         "tipo" : "Termo", 
         "nombre" : "Termo Stanley",  
-        "imagen" : "../Imagenes/Termos/termoStanley.jpg",
+        "imagen" : "https://apolomates.com.ar/wp-content/uploads/2022/04/stanley-negro-095.png",
         "precio" : 18000, 
-        "descripcion" : "Termo importado desde Estados Unidos de  1.4 LTS con gran rendimiento termico", 
+        "descripcion" : "Termo importado desde Estados Unidos de  0.95 LTS con gran rendimiento termico", 
         "id" : "04"
     }, 
     {
         "tipo" : "Termo", 
         "nombre" : "Termo Luminagro", 
-        "imagen" : "../Imagenes/Termos/termoLuminagro.jpg",
+        "imagen" : "https://apolomates.com.ar/wp-content/uploads/2021/11/Media-manija-web-1.png",
         "precio" : 14000, 
         "descripcion" : "Termo Luminagro con capacidad de un litro su sistema de vacío interno permite la conservación de la temperatura de tu bebida",  
         "id" : "05"

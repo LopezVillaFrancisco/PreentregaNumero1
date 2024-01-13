@@ -59,7 +59,6 @@ function elimnarProductoCarrito(e){
     const id=e.currentTarget.id;
      const index = carrito.findIndex(producto=>producto.id == id); 
     carrito.splice(index, 1); 
-    console.log(carrito)     
     actualizarLocalStorage();
     cargarCarrito(); 
   }

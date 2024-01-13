@@ -22,11 +22,13 @@ function cargarProductos(tipoProducto) {
         tipoProducto.forEach( producto => {              
             const productoDiv=document.createElement("div"); 
             productoDiv.classList.add('mate'); 
-            productoDiv.innerHTML=`<h3 id='nombre'>${producto.nombre}</h3> 
-            <h4 id='precio'>$ ${producto.precio}</h4>
-             <p id='descripcion'>${producto.descripcion}</p>
-             <img src="${producto.imagen}" id="fotoProducto" alt="${producto.nombre}"><br/>
-           <button class='btn-agregar-carrito'id='${producto.id}'>Agregar al carrito</button>` 
+            productoDiv.innerHTML=`
+            <img src="${producto.imagen}" id="fotoProducto" alt="${producto.nombre}"><br>
+            <h3 id='nombre'>${producto.nombre}</h3> 
+            <h4 id='precio'>$ ${producto.precio}</h4><br>
+            <div>
+                <button class='btn-agregar-carrito'id='${producto.id}'>Agregar al carrito</button> 
+            </div>` 
            contenedorProductos.append(productoDiv);  
            
            actualizarBoton(); 
