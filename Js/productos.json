@@ -3,7 +3,7 @@
         "tipo" : "Mate",
         "nombre" : "mateImperial", 
         "precio" : 5000, 
-        "imagen" : "https://d22fxaf9t8d39k.cloudfront.net/a26db402338b97790c3e1905747ca941316aa456595918b81509b936e0dc239d109209.png", 
+        "imagen" : "https://http2.mlstatic.com/D_NQ_NP_984607-MLA53647169717_022023-O.webp", 
         "descripcion" : "Mate moderno de color negro ideal para usar en el dia a dia",
         "id" : "01"
     },     
@@ -11,7 +11,7 @@
         "tipo" : "Mate",
         "nombre" : "Mate Torpedo", 
         "precio" : 5000, 
-        "imagen" : "https://apolomates.com.ar/wp-content/uploads/2021/11/Torpedo-uruguayo-liso.jpg", 
+        "imagen" : "https://matesibarra.com/wp-content/uploads/2021/06/torpedo.jpg", 
         "descripcion" : "Hermoso mate color madera", 
         "id" : "02"
     }, 
@@ -19,7 +19,7 @@
         "tipo" : "Mate",
         "nombre" : "Mate Camionero", 
         "precio" : 5000, 
-        "imagen" : "https://apolomates.com.ar/wp-content/uploads/2021/11/Camionero-uruguayo.jpg",
+        "imagen" : "https://d22fxaf9t8d39k.cloudfront.net/831e5ee97c3d39ae0c99fdacf88b8a2b143242f9e15f49b44e0d3fc227fbd72979743.png",
         "descripcion" : "Mate moderno de color madera ideal para usar en el dia a dia", 
         "id" :  "03"    
     }, 
